@@ -4,14 +4,17 @@
 
 int main() {
     int heads = 0, tails = 0;
+    char str[100];
     
-    // 乱数生成器を初期化
     srand(time(NULL));
+
+    printf("Who are you?\n");
+    scanf("%s", str);
+    printf("Hello, %s!\n", str);
     
     printf("Tossing a coin...\n");
     
     for (int i = 1; i <= 3; i++) {
-        // 0か1のランダムな数を生成
         int result = rand() % 2;
         
         if (result == 0) {
